@@ -43,3 +43,20 @@ def test_concluir_tarefa_inexistente():
     assert resultado == False
  
  
+def test_remover_tarefa():
+    todo.adicionar_tarefa("Ler um livro")
+    resultado = todo.remover_tarefa(1)
+    assert resultado == True
+    assert len(todo.tarefas) == 0
+ 
+ 
+def test_remover_tarefa_inexistente():
+    resultado = todo.remover_tarefa(99)
+    assert resultado == False
+ 
+ 
+def test_multiplas_tarefas():
+    todo.adicionar_tarefa("Tarefa 1")
+    todo.adicionar_tarefa("Tarefa 2")
+    todo.adicionar_tarefa("Tarefa 3")
+    assert len(todo.tarefas) == 3
