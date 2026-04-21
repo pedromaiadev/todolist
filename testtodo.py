@@ -31,3 +31,15 @@ def test_adicionar_tarefa_descricao_espacos():
     assert resultado == False
     assert len(todo.tarefas) == 0
  
+def test_concluir_tarefa():
+    todo.adicionar_tarefa("Fazer exercícios")
+    resultado = todo.concluir_tarefa(1)
+    assert resultado == True
+    assert todo.tarefas[0]["concluida"] == True
+ 
+ 
+def test_concluir_tarefa_inexistente():
+    resultado = todo.concluir_tarefa(99)
+    assert resultado == False
+ 
+ 
