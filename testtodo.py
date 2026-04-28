@@ -6,7 +6,6 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
  
 import todo
  
- 
 def setup_function():
     """Limpa a lista de tarefas antes de cada teste."""
     todo.tarefas.clear()
