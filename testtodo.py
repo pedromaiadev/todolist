@@ -1,4 +1,4 @@
-# tests/test_todo.py - Testes unitários do Gerenciador de Tarefas
+# # Testes unitários - Atividade Somativa 2
  
 import sys
 import os
